@@ -8,9 +8,10 @@ module.exports = {
         // or `'canary'` for less polished but more frequent updates
         updateChannel: 'stable',
         // default font size in pixels for all tabs
-        fontSize: 12,
+        fontSize: 14,
         // font family with optional fallbacks
-        fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
+        // fontFamily: 'Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace'
+        fontFamily: '"CaskaydiaCove NF", Menlo, "DejaVu Sans Mono", Consolas, "Lucida Console", monospace',
         // default font weight: 'normal' or 'bold'
         fontWeight: 'normal',
         // font weight for bold characters: 'normal' or 'bold'
@@ -18,9 +19,9 @@ module.exports = {
         // line height as a relative unit
         lineHeight: 1,
         // letter spacing as a relative unit
-        letterSpacing: 0.5,
+        letterSpacing: 0,
         // terminal cursor background color and opacity (hex, rgb, hsl, hsv, hwb or cmyk)
-        cursorColor: 'rgba(203, 241, 245)',
+        cursorColor: 'rgba(180, 210, 230)',
         // terminal text color under BLOCK cursor
         cursorAccentColor: '#000',
         // `'BEAM'` for |, `'UNDERLINE'` for _, `'BLOCK'` for █
@@ -33,7 +34,7 @@ module.exports = {
         // opacity is only supported on macOS
         backgroundColor: '#000',
         // terminal selection color
-        selectionColor: 'rgba(218, 233, 235)',
+        selectionColor: 'rgba(243, 247, 208)',
         // border color (window, tabs)
         borderColor: '#333',
         // custom CSS to embed in the main window
@@ -48,9 +49,9 @@ module.exports = {
         // set to `false` (without backticks and without quotes) if you want to hide the minimize, maximize and close buttons
         // additionally, set to `'left'` if you want them on the left, like in Ubuntu
         // default: `true` (without backticks and without quotes) on Windows and Linux, ignored on macOS
-        showWindowControls: false,
+        showWindowControls: true,
         // custom padding (CSS format, i.e.: `top right bottom left`)
-        padding: '2px 10px',
+        padding: '0px 5px 0px 10px',
         // the full list. if you're going to provide the full color palette,
         // including the 6 x 6 color cubes and the grayscale map, just provide
         // an array here instead of a color map object
@@ -92,10 +93,10 @@ module.exports = {
         //
         // Cygwin
         // - Example: `C:\\cygwin64\\bin\\bash.exe`
-        shell: '/usr/bin/zsh',
+        shell: 'C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\powershell.exe',
         // for setting shell arguments (i.e. for using interactive shellArgs: `['-i']`)
         // by default `['--login']` will be used
-        shellArgs: ['-i'],
+        shellArgs: ['-noLogo'],
         // for environment variables
         env: {},
         // Supported Options:
@@ -133,14 +134,15 @@ module.exports = {
     //   `hyperpower`
     //   `@company/project`
     //   `project#1.0.1`
-    plugins: ["hyper-material-theme", "hyper-blink", "hypercwd"],
+    //   `hyper-launch-menu`
+    plugins: ["hyper-material-theme", "hyper-visual", "hypercwd"],
     // in development, you can create a directory under
     // `~/.hyper_plugins/local/` and include it here
     // to load it and avoid it being `npm install`ed
     localPlugins: [],
     keymaps: {
-    // Example
-    // 'window:devtools': 'cmd+alt+o',
+        // Example
+        // 'window:devtools': 'cmd+alt+o',
     },
 };
 //# sourceMappingURL=config-default.js.map
